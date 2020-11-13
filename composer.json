@@ -2,6 +2,7 @@
     "name": "deniztezcan/laravel-strava",
     "description": "A laravel package to access data from the Strava API.",
     "type": "library",
+    "version": "2.0.0",
     "require": {
         "guzzlehttp/guzzle": "^6.3|^7.0",
         "illuminate/support": "5.5.*|5.6.*|5.7.*|5.8.*|^6.0|^7.0|^8.0"
