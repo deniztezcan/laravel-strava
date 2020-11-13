@@ -1,5 +1,5 @@
 {
-    "name": "codetoad/strava",
+    "name": "deniztezcan/laravel-strava",
     "description": "A laravel package to access data from the Strava API.",
     "type": "library",
     "require": {
