@@ -52,32 +52,32 @@ In order to use this package you will need to create an app from within your str
 To install the package within your laravel project use the following composer command:
 
 ```shell
-composer require codetoad/strava
+composer require deniztezcan/laravel-strava
 ```
 
 
 ## Publish Strava Config File
 
-The `vendor:publish` commmand will publish a file named `ct_strava.php` within your laravel project config folder `config/ct_strava.php`. Edit this file with your Strava API credentials, generated from the Strava app you created.
+The `vendor:publish` commmand will publish a file named `strava.php` within your laravel project config folder `config/strava.php`. Edit this file with your Strava API credentials, generated from the Strava app you created.
 
 ```shell
-php artisan vendor:publish --provider="CodeToad\Strava\StravaServiceProvider"
+php artisan vendor:publish --provider="DenizTezcan\Strava\StravaServiceProvider"
 ```
 
 Published Config File Contents
 
 ```php
-'client_id' => env('CT_STRAVA_CLIENT_ID', '')
-'client_secret' => env('CT_STRAVA_SECRET_ID', '')
-'redirect_uri' => env('CT_STRAVA_REDIRECT_URI', '')
+'client_id' => env('STRAVA_CLIENT_ID', '')
+'client_secret' => env('STRAVA_SECRET_ID', '')
+'redirect_uri' => env('STRAVA_REDIRECT_URI', '')
 ```
 
 Alternatively you can ignore the above publish command and add this following variables to your `.env` file. Make sure to add your Strava App credentials
 
 ```text
-CT_STRAVA_CLIENT_ID=ADD-STRAVA-CLIENT-ID-HERE
-CT_STRAVA_SECRET_ID=ADD-STRAVA-SECRET-HERE
-CT_STRAVA_REDIRECT_URI=ADD-STRAVA-REDIRECT-URI-HERE
+STRAVA_CLIENT_ID=ADD-STRAVA-CLIENT-ID-HERE
+STRAVA_SECRET_ID=ADD-STRAVA-SECRET-HERE
+STRAVA_REDIRECT_URI=ADD-STRAVA-REDIRECT-URI-HERE
 ```
 
 
@@ -89,13 +89,13 @@ If you're using Laravel 5.5+ you don't need to manually add the service provider
 #### Provider
 
 ```php
-CodeToad\Strava\StravaServiceProvider::class,
+DenizTezcan\Strava\StravaServiceProvider::class,
 ```
 
 #### Alias / Facade
 
 ```php
-'Strava' => CodeToad\Strava\StravaFacade::class,
+'Strava' => DenizTezcan\Strava\StravaFacade::class,
 ```
 
 
