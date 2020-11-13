@@ -4,7 +4,7 @@
 # Richie McMullen
 # 2019
 
-namespace CodeToad\Strava;
+namespace DenizTezcan\Strava;
 
 use GuzzleHttp\Client;
 
@@ -20,11 +20,11 @@ class StravaServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->mergeConfigFrom(
-          __DIR__ . '/config/strava.php', 'ct_strava'
+          __DIR__ . '/config/strava.php', 'strava'
         );
 
         $this->publishes([
-          __DIR__ . '/config/strava.php' => config_path('ct_strava.php')
+          __DIR__ . '/config/strava.php' => config_path('strava.php')
         ]);
     }
 
@@ -39,9 +39,9 @@ class StravaServiceProvider extends ServiceProvider
             $client = new Client();
 
             return new Strava(
-              config('ct_strava.client_id'),
-              config('ct_strava.client_secret'),
-              config('ct_strava.redirect_uri'),
+              config('strava.client_id'),
+              config('strava.client_secret'),
+              config('strava.redirect_uri'),
               $client
             );
 

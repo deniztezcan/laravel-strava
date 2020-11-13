@@ -4,7 +4,7 @@
 # Richie McMullen
 # 2019
 
-namespace CodeToad\Strava;
+namespace DenizTezcan\Strava;
 
 use Illuminate\Support\Facades\Facade;
 
